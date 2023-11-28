@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="css/game.css">
+        <script src="js/game.js"></script>
+        
+    </head>
+    <body>
+        <p>Hello <%= name %>, <%= date %></p>
+        <form action="/listgames" method="post">
+            <input type="submit" value="List games">
+        </form>
+        <form action="/getgame" method="post">
+            <input type="text" id="id" name="id" required>
+            <input type="submit" value="Get game">
+        </form>
+        <form action="/getscore" method="post">
+            <input type="submit" value="Get score">
+        </form>
+        <form action="/logout" method="post">
+            <input type="submit" value="Logout">
+        </form>
+        <div class="board">
+            <div class="square" id="0" onclick="squareClicked(this.id)"></div>
+            <div class="square" id="1" onclick="squareClicked(this.id)"></div>
+            <div class="square" id="2" onclick="squareClicked(this.id)"></div>
+            <div class="square" id="3" onclick="squareClicked(this.id)"></div>
+            <div class="square" id="4" onclick="squareClicked(this.id)"></div>
+            <div class="square" id="5" onclick="squareClicked(this.id)"></div>
+            <div class="square" id="6" onclick="squareClicked(this.id)"></div>
+            <div class="square" id="7" onclick="squareClicked(this.id)"></div>
+            <div class="square" id="8" onclick="squareClicked(this.id)"></div>
+        </div>
+        <p id="game-state"></p>
+    </body>
+</html>
